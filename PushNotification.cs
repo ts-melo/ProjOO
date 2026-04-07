@@ -9,7 +9,7 @@ namespace ConsoleApp1
     public class PushNotification : Notificacao
     {
         public override void Enviar(string msg, string destino)
-            => Console.WriteLine($"[SMS] Para: {destino} | Msg: {msg}");
+            => Console.WriteLine($"[Push] Para: {destino} | Msg: {msg}");
 
     }
 }

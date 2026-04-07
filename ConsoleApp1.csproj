@@ -51,9 +51,13 @@
     <Compile Include="PushNotification.cs" />
     <Compile Include="SistemaConfig.cs" />
     <Compile Include="SMS.cs" />
+    <Compile Include="UnitTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="tests\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
