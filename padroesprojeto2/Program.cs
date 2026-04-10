@@ -1,8 +1,10 @@
-﻿using SistemaNotificacao.Core;
+﻿using System;
+using SistemaNotificacao.Core;
 using SistemaNotificacao.Servicos;
 
 // Acessando o Singleton
 var config = ConfiguracaoGlobal.Instancia;
+config.MaxTentativas = 2;
 Console.WriteLine($"--- {config.NomeAplicacao} ---");
 Console.WriteLine($"Conectado ao servidor: {config.ServidorEnvio}\n");
 

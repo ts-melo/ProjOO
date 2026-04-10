@@ -1,3 +1,4 @@
+using System;
 namespace SistemaNotificacao.Servicos;
 
 public class SmsNotificacao : INotificacao

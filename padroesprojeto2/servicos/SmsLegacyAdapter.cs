@@ -1,5 +1,5 @@
 namespace SistemaNotificacao.Servicos;
-
+using System;
 // A classe externa que não podemos mudar
 public class LegacySMS
 {
