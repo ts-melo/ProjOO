@@ -4,12 +4,14 @@ public static class NotificacaoFactory
 {
     public static INotificacao Criar(string tipo)
     {
-        return tipo.ToLower() switch
+        INotificacao servico = tipo.ToLower() switch
         {
             "email" => new EmailNotificacao(),
-            "sms" => new SmsNotificacao(),
+            "sms" => new SmsLegacyAdapter(),
             "push" => new PushNotificacao(),
             _ => throw new ArgumentException("Canal de notificação desconhecido.")
         };
+
+        return new NotificacaoProxy(servico);
     }
 }
