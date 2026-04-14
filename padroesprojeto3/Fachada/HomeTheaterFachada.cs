@@ -1,17 +1,15 @@
-using HomeTheater.Subsistemas;
+using ExHomeTheater.Subsistemas;
 using System;
-using System.Runtime.InteropServices;
-using System.Xml.Serialization;
 
-namespace HomeTheater.Fachada
+namespace ExHomeTheater.Fachada
 {
     public class HomeTheaterFachada{
         private readonly TV _tv;
-        private readonly som _som;
+        private readonly Som _som;
         private readonly playerMedia _player;
         private readonly luzAmbiente _luz;
 
-        public HomeTheaterFachada(TV tv, som som, playerMedia pm, luzAmbiente luz)
+        public HomeTheaterFachada(TV tv, Som som, playerMedia pm, luzAmbiente luz)
         {
             _tv = tv;
             _som = som;

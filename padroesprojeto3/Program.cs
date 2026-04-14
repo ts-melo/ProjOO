@@ -9,7 +9,7 @@ namespace ExHomeTheater
         static void Main(string[] args)
         {
             TV minhaTV = new TV();
-            som meuSom = new som();
+            Som meuSom = new Som();
             playerMedia meuPlayer = new playerMedia();
             luzAmbiente minhaLuz = new luzAmbiente();
 
@@ -17,7 +17,7 @@ namespace ExHomeTheater
 
             controle.AssistirFilme("ATLA");
             controle.DesligarTudo();
-            
+
          }
     }
 

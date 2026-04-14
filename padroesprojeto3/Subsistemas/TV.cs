@@ -2,7 +2,7 @@ using System;
 
 namespace ExHomeTheater.Subsistemas
 {
-    public class televisao
+    public class TV
     {
         public void Ligar()=> Console.WriteLine("Tv ligada");
         public void Desligar()=> Console.WriteLine("Tv desligada");
