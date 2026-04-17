@@ -10,9 +10,10 @@ namespace SistemaMonitoramentoAmazonia
         private double _ph;
         private double _umidade;
 
+        public string Nome { get; private set; }
         public PCD(string nome) => Nome = nome;
 
-        public void RegistrarInteresse(IObservadorPDC uni)
+        public void RegistrarInteresse(IObservadorPCD uni)
         {
             if (!_universidades.Contains(uni))
             {
@@ -20,7 +21,7 @@ namespace SistemaMonitoramentoAmazonia
             }
         }
 
-        public void setMedicoes(double temp, double ph, double umidade)
+        public void SetMedicoes(double temp, double ph, double umidade)
         {
             _temperatura = temp;
             _ph = ph;
