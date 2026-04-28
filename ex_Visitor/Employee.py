@@ -5,7 +5,7 @@ class Empregado(Element):
         self.cargo = cargo
 
     def accept(self, visitor :CompanyVisitor):
-        visitor.visit_employee(self)
+        visitor.ver_employee(self)
 
 class Departamento(Element):
     def __init__(self, nome):
@@ -16,6 +16,6 @@ class Departamento(Element):
         self.empregados.append(empregado)
 
     def accept(self, visitor: CompanyVisitor):
-        visitor.visit_department(self)
+        visitor.ver_department(self)
         for e in self.empregados:
             e.accept(visitor)

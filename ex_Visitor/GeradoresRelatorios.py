@@ -1,17 +1,19 @@
 from Visitor import CompanyVisitor, Element
+# Em GeradoresRelatorios.py
 class Pdf(CompanyVisitor):
-    def ver_department(self, department):
-        print("gerando relatorio em formato PDF do departamento: " + department.nome)
-    def ver_employee(self, employee):
-        print("gerando relatorio em formato PDF do empregado: " + employee.nome)
+    def visit_department(self, department):
+        print(f"=== RELATÓRIO PDF: DEPARTAMENTO {department.nome} ===")
+        print("Lista de Colaboradores:")
+
+    def visit_employee(self, employee):
+        print(f"  - Nome: {employee.nome} | Cargo: {employee.cargo}")
 
 class Json(CompanyVisitor):
-    def ver_department(self, department):
-        print("gerando relatorio em formato JSON do departamento: " + department.nome)
-    def ver_employee(self, employee):
-        print("gerando relatorio em formato JSON do empregado: " + employee.nome)
+    def visit_department(self, department):
+        print(f"{{ 'departamento': '{department.nome}', 'funcionarios': [")
 
-
+    def visit_employee(self, employee):
+        print(f"    {{ 'nome': '{employee.nome}', 'cargo': '{employee.cargo}' }},")
 
 class Xsls(CompanyVisitor):
     def ver_department(self, department):
