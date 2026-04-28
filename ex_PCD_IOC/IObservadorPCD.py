@@ -6,3 +6,5 @@ class IObservadorPCD(ABC):
     @abstractmethod
     def atualizar(self, nome_pcd, temp, ph, umidade):
         pass
+
+    
