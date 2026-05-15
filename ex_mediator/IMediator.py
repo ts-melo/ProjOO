@@ -2,9 +2,9 @@ from abc import ABC, abstractmethod
 
 class ChatMediator(ABC):
     @abstractmethod
-    def send_message(self, mensagem, usuario):
+    def enviar_mensagem(self, mensagem, usuario):
         pass
 
     @abstractmethod
-    def add_colleague(self, usuario):
+    def adicionar_usuario(self, usuario):
         pass
