@@ -12,3 +12,6 @@ def main():
 
     alice.enviar_mensagem("Olá, Bob!")
     bob.enviar_mensagem("Oi, Alice! Como vai?")
+
+if __name__ == "__main__":
+    main()
