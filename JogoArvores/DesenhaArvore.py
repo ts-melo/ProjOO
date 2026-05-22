@@ -7,8 +7,8 @@ class ArvoreNoMapa:
         self.altura = altura
         self.diametro = diametro
         self.galhos = galhos
-        self._especie = especie
+        self.especie = especie
 
     def desenhar(self):
-        return self._especie.renderizar(self.x, self.y, self.altura, self.diametro, self.galhos)
+        return self.especie.renderizar(self.x, self.y, self.altura, self.diametro, self.galhos)
     
