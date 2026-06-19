@@ -17,20 +17,19 @@ class Comparator(ABC):
     
     #esse é a parte que varia, cada subclasse implementa de forma diferente
     #required_operations
-    @abstractmethod
+    
     def extract_value(self, p):
         if not p:
-            return''
+            return ''
         else:
             return p.lower() #minuscula para comparação case-insensitive
         pass
-
 
 class UltimaLetra(Comparator):
     #sobrescreve comportamento padrão para ordenar pela ultima letra
     def extract_value(self, p):
         if not p:
-            return''
+            return ''
         return p[-1].lower() #minuscula para comparação case-insensitive
     
 class Tamanho(Comparator):
@@ -49,7 +48,8 @@ if __name__ == "__main__":
     print("-" * 30)
     a = palavras.copy()
     a.sort()
-
+    print("Ordenado alfabeticamente:", a)
+    print("-" * 30)
     #ordenar pela ultima letra
     palavras_ultima_letra = sorted(palavras, key=cmp_to_key(UltimaLetra().compare))
     print("Ordenado pela última letra:", palavras_ultima_letra)
